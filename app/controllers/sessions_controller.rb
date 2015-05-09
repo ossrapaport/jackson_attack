@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-  def new
-    render :new
-  end
 
   def create
     # find if any user has that email

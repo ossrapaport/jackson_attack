@@ -1,11 +1,10 @@
 class SmsController < ApplicationController
-  before_action :authenticate
-
+  
   def create
     sms          = TwilioIntegration.new
     phone_number = "+1#{params[:phone_number]}"
-    number_of_times      = params[:number_of_texts].to_i - 1
-
+    number_of_times      = params[:number_of_texts].to_i
+    results = FlickrWrapper.search_for_jackson
     number_of_times.times do |i|  
       photo_url = FlickrWrapper.make_url(results.sample)
       message = IpsumWrapper.get_text
