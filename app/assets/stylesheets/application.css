@@ -14,8 +14,8 @@
  *= require_self
  */
 body {
-  /*background-color: blue;*/
-  background-image: url("https://lh4.googleusercontent.com/-qYiXoUQAUbo/TXle5NQOhTI/AAAAAAAAB08/dybtHnov590/s1600/Samuel+L.+Jackson+Pulp+Fiction.PNG");
+  background-color: blue;
+  background-image: url("https://lh4.googleusercontent.com/-qYiXoUQAUbo/TXle5NQOhTI/AAAAAAAAB08/dybtHnov590/s1600/Samuel+L.+Jackson+Pulp+Fiction.png");
 }
 @font-face {
   font-family: Pulp Fiction M54;
@@ -24,13 +24,22 @@ body {
 .order {
   position: center;
   display: block;
-  POSITION: absolute;
-  WIDTH: 300px;
+  position: absolute;
+  width: 300px;
   padding: 20px;
+  left: 200px;
 }
 h1 {
   color: #fff;
-  font-family: Pulp Fiction M54;
+/*  font-family: Pulp Fiction M54;
   src: url(../fonts/PulpFictionItalicM54.ttf);
-  right: 50px;
+  right: 50px;*/
+}
+
+p {
+  color: #fff;
+  font-size: 50px;
+}
+#amount {
+    width: 300px;
 }
