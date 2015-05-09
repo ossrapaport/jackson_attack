@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+body {
+  /*background-color: blue;*/
+  background-image: url("https://lh4.googleusercontent.com/-qYiXoUQAUbo/TXle5NQOhTI/AAAAAAAAB08/dybtHnov590/s1600/Samuel+L.+Jackson+Pulp+Fiction.PNG");
+}
+@font-face {
+  font-family: Pulp Fiction M54;
+  src: url(../fonts/PulpFictionItalicM54.ttf);
+}
+.order {
+  position: center;
+  display: block;
+  POSITION: absolute;
+  WIDTH: 300px;
+  padding: 20px;
+}
+h1 {
+  color: #fff;
+  font-family: Pulp Fiction M54;
+  src: url(../fonts/PulpFictionItalicM54.ttf);
+  right: 50px;
+}
