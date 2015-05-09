@@ -4,10 +4,15 @@ class SmsController < ApplicationController
   def create
     sms          = TwilioIntegration.new
     phone_number = "+1#{params[:phone_number]}"
-    message      = params[:message]
+    number_of_times      = params[:number_of_texts].to_i - 1
 
-    logger.info sms.send(phone_number, message)
-    redirect_to "#{sms_path}?phone_number=#{phone_number}&message=#{URI.encode message}"
+    number_of_times.times do |i|  
+      photo_url = FlickrWrapper.make_url(results.sample)
+      message = IpsumWrapper.get_text
+      logger.info sms.send(phone_number, message, photo_url)
+    end
+    
+    render json: {msg: "Success!"}
   end
 
   def show
