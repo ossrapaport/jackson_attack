@@ -11,8 +11,8 @@ $(document).ready(function(){
         name: document.getElementById('name').value
       }
     }).done(function(data){
-      console.log(data);
-    })
+      $("body").append("<p>Samuel has been sent, motherf***a</p>");
+    });
   }); 
 });
        
